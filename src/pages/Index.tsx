@@ -59,9 +59,11 @@ const Index = () => {
               <Icon name="GraduationCap" className="mr-2" size={20} />
               Записаться в школу
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollToSection('tournaments')} className="text-lg px-8">
-              <Icon name="Trophy" className="mr-2" size={20} />
-              Участвовать в турнирах
+            <Button size="lg" variant="outline" asChild className="text-lg px-8">
+              <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer">
+                <Icon name="MessageSquare" className="mr-2" size={20} />
+                Написать ВКонтакте
+              </a>
             </Button>
           </div>
         </div>
@@ -251,9 +253,11 @@ const Index = () => {
             <CardContent className="pt-12 pb-12">
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-1 flex justify-center">
-                  <div className="w-48 h-48 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
-                    <Icon name="User" className="text-white" size={96} />
-                  </div>
+                  <img 
+                    src="https://cdn.poehali.dev/files/adba6756-4f84-496d-bdbf-cc63b64f0c77.png"
+                    alt="Денис Рейфисов"
+                    className="w-48 h-48 object-cover rounded-full border-4 border-primary/30"
+                  />
                 </div>
                 <div className="md:col-span-2">
                   <h2 className="text-3xl font-bold mb-4 text-primary">Денис Рейфисов</h2>
@@ -391,18 +395,6 @@ const Index = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
-                      <Icon name="MessageCircle" className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-semibold mb-1">Telegram</p>
-                      <a href="https://t.me/lbs_bars01" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
-                        @lbs_bars01
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
                       <Icon name="MessageSquare" className="text-primary" size={24} />
                     </div>
                     <div>
@@ -432,9 +424,9 @@ const Index = () => {
                       </a>
                     </Button>
                     <Button className="w-full" size="lg" variant="outline" asChild>
-                      <a href="https://t.me/lbs_bars01" target="_blank" rel="noopener noreferrer">
-                        <Icon name="Send" className="mr-2" size={20} />
-                        Написать в Telegram
+                      <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer">
+                        <Icon name="MessageSquare" className="mr-2" size={20} />
+                        Написать ВКонтакте
                       </a>
                     </Button>
                   </div>
@@ -481,11 +473,8 @@ const Index = () => {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>Ленина 25, Новосибирск</p>
                 <p>+7 (923) 192-24-77</p>
-                <a href="https://t.me/lbs_bars01" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors">
-                  Telegram: @lbs_bars01
-                </a>
                 <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors">
-                  ВКонтакте
+                  ВКонтакте: lbs_bars01
                 </a>
               </div>
             </div>
