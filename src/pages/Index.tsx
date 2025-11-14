@@ -29,6 +29,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('tournaments')} className="text-sm font-medium hover:text-primary transition-colors">Турниры</button>
               <button onClick={() => scrollToSection('school')} className="text-sm font-medium hover:text-primary transition-colors">Школа</button>
               <button onClick={() => scrollToSection('trainer')} className="text-sm font-medium hover:text-primary transition-colors">Тренер</button>
+              <button onClick={() => scrollToSection('gallery')} className="text-sm font-medium hover:text-primary transition-colors">Фото</button>
               <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
             </div>
             <Button onClick={() => scrollToSection('contacts')} className="hidden md:flex">
@@ -284,7 +285,69 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-white">
+      <section id="gallery" className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Icon name="Camera" className="mx-auto mb-4 text-primary" size={48} />
+            <h2 className="text-4xl font-bold mb-4 text-primary">Фото и видео</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Моменты с турниров, тренировок и достижений наших спортсменов
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+            <Card className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                <Icon name="Trophy" className="text-primary" size={64} />
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-semibold mb-2">Турниры</h3>
+                <p className="text-sm text-muted-foreground">Фото с соревнований и награждений</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
+                <Icon name="Users" className="text-secondary" size={64} />
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-semibold mb-2">Тренировки</h3>
+                <p className="text-sm text-muted-foreground">Процесс обучения и мастер-классы</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                <Icon name="Award" className="text-accent" size={64} />
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-semibold mb-2">Достижения</h3>
+                <p className="text-sm text-muted-foreground">Награды и победы наших спортсменов</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="max-w-4xl mx-auto border-2 border-primary/20">
+            <CardContent className="pt-8 text-center">
+              <Icon name="Video" className="mx-auto mb-4 text-primary" size={48} />
+              <h3 className="text-2xl font-bold mb-4">Больше фото и видео в наших соцсетях</h3>
+              <p className="text-muted-foreground mb-6">
+                Подписывайтесь на нас ВКонтакте, чтобы не пропустить новые материалы и анонсы турниров
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="outline" asChild>
+                  <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer">
+                    <Icon name="MessageSquare" className="mr-2" size={20} />
+                    Группа ВКонтакте
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-20 px-4 bg-gradient-to-br from-muted to-white">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-primary">Свяжитесь с нами</h2>
@@ -328,6 +391,18 @@ const Index = () => {
                       <p className="font-semibold mb-1">Telegram</p>
                       <a href="https://t.me/lbs_bars01" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
                         @lbs_bars01
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Icon name="MessageSquare" className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <p className="font-semibold mb-1">ВКонтакте</p>
+                      <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+                        vk.link/lbs_bars01
                       </a>
                     </div>
                   </div>
@@ -391,6 +466,7 @@ const Index = () => {
                 <button onClick={() => scrollToSection('tournaments')} className="block text-white/80 hover:text-white transition-colors">Турниры</button>
                 <button onClick={() => scrollToSection('school')} className="block text-white/80 hover:text-white transition-colors">Школа бильярда</button>
                 <button onClick={() => scrollToSection('trainer')} className="block text-white/80 hover:text-white transition-colors">О тренере</button>
+                <button onClick={() => scrollToSection('gallery')} className="block text-white/80 hover:text-white transition-colors">Фото и видео</button>
               </div>
             </div>
 
@@ -400,7 +476,10 @@ const Index = () => {
                 <p>Ленина 25, Новосибирск</p>
                 <p>+7 (923) 192-24-77</p>
                 <a href="https://t.me/lbs_bars01" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
-                  @lbs_bars01
+                  Telegram: @lbs_bars01
+                </a>
+                <a href="https://vk.link/lbs_bars01" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
+                  ВКонтакте
                 </a>
               </div>
             </div>
